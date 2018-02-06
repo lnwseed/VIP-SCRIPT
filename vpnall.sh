@@ -1,5 +1,14 @@
 #!/bin/sh
 
+# initialisasi var
+export DEBIAN_FRONTEND=noninteractive
+OS=`uname -m`;
+MYIP=$(curl -4 icanhazip.com)
+if [ $MYIP = "" ]; then
+   MYIP=`ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1`;
+fi
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 
@@ -233,7 +242,7 @@ http {
 }
 END3
 mkdir -p /home/vps/public_html
-wget -O /home/vps/public_html/index.html "http://script.hostingtermurah.net/repo/index.html"
+wget -O /home/vps/public_html/index.html "http://xn--l3clxf6cwbe0gd7j.com/index.html"
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 args='$args'
 uri='$uri'
@@ -278,7 +287,7 @@ service dropbear restart
 #Upgrade to Dropbear 2016
 cd
 apt-get install zlib1g-dev
-wget http://script.hostingtermurah.net/repo/dropbear/dropbear-2016.74.tar.bz2
+wget http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/dropbear-2016.74.tar.bz2
 bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
 cd dropbear-2016.74
 ./configure
@@ -290,7 +299,7 @@ service dropbear restart
 
 # install vnstat gui
 cd /home/vps/public_html/
-wget http://script.hostingtermurah.net/repo/vnstat_php_frontend-1.5.1.tar.gz
+wget http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/vnstat_php_frontend-1.5.1.tar.gz
 tar xf vnstat_php_frontend-1.5.1.tar.gz
 rm vnstat_php_frontend-1.5.1.tar.gz
 mv vnstat_php_frontend-1.5.1 vnstat
@@ -337,14 +346,14 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname Proxy.HostingTermurah.net
+visible_hostname Proxy.ocspanel.info
 END
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
 # install webmin
 cd
-wget "http://script.hostingtermurah.net/repo/webmin_1.801_all.deb"
+wget "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/webmin_1.801_all.deb"
 dpkg --install webmin_1.801_all.deb;
 apt-get -y -f install;
 sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
@@ -383,8 +392,8 @@ mkdir /var/lib/premium-script
 /etc/init.d/pptpd restart
 
 # install mrtg
-wget -O /etc/snmp/snmpd.conf "http://script.hostingtermurah.net/repo/snmpd.conf"
-wget -O /root/mrtg-mem.sh "http://script.hostingtermurah.net/repo/mrtg-mem.sh"
+wget -O /etc/snmp/snmpd.conf "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/snmpd.conf"
+wget -O /root/mrtg-mem.sh "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/mrtg-mem.sh"
 chmod +x /root/mrtg-mem.sh
 cd /etc/snmp/
 sed -i 's/TRAPDRUN=no/TRAPDRUN=yes/g' /etc/default/snmpd
@@ -471,8 +480,8 @@ END
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
 cat > /home/vps/public_html/client.ovpn <<-END
-# OpenVPN Configuration Dibuat Oleh HostingTermurah.net
-# (Official Partner VPS-Murah.net)
+# OpenVPN Configuration www.fb.com/ceolnw
+# (Official Partner Ocspanel.info)
 client
 dev tun
 proto tcp
@@ -480,6 +489,8 @@ persist-key
 persist-tun
 dev tun
 pull
+http-proxy-retry
+http-proxy $MYIP 8080
 resolv-retry infinite
 nobind
 user nobody
@@ -492,10 +503,10 @@ mute-replay-warnings
 auth-user-pass
 redirect-gateway def1
 script-security 2
-route 0.0.0.0 0.0.0.0
+route 8.8.8.8 8.8.4.4
 route-method exe
 route-delay 2
-remote $MYIP 1194
+remote $MYIP:1194@static.tlcdn1.com/cdn.line-apps.com/line.naver.jp/nelo2-col.linecorp.com/mdm01.cpall.co.th/lvs.truehits.in.th/dl-obs.official.line.naver.jp
 cipher AES-128-CBC
 END
 echo '<ca>' >> /home/vps/public_html/client.ovpn
@@ -536,9 +547,9 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
 
 # install badvpn
-wget -O /usr/bin/badvpn-udpgw "http://script.hostingtermurah.net/repo/badvpn-udpgw"
+wget -O /usr/bin/badvpn-udpgw "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
-  wget -O /usr/bin/badvpn-udpgw "http://script.hostingtermurah.net/repo/badvpn-udpgw64"
+  wget -O /usr/bin/badvpn-udpgw "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/badvpn-udpgw64"
 fi
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
