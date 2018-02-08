@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#อัพเดตก่อนครับพี่น้อง
+sudo apt-get update
+sudo apt-get install neofetch
+
 # text gambar
 apt-get install boxes
 
@@ -29,7 +33,7 @@ myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 			   echo "กำลังตรวจสอบ Permision..."
                sleep 1
                
-			   echo -e "${green}ได้รับอนุญาตแล้ว...${NC}"
+			   echo -e "ได้รับอนุญาตแล้ว..." | lolcat
                sleep 1
 			   
 flag=0
@@ -50,7 +54,7 @@ fi
 
 #REGISTER CONFIG
 clear
- echo ""
+ echo "" | lolcat
           echo -e "\e[031;1m     
                          
                 =============== OS-32 & 64-bit ================
@@ -74,12 +78,12 @@ clear
                   .        Name  : HERE BIRD LNWSHOP       .
                   ..........................................   
                                       
-                           Thank You For Choice Us"
+                           Thank You For Choice Us" | lolcat
 			
 	echo ""
 	echo -e "\e[034;1m----SCRIPT V.1 VIP"
 	echo ""
-	echo -e "\e[032;1m ( ใส่รหัสผ่านติดตั้ง... )"
+	echo -e "\e[032;1m ( ใส่รหัสผ่านติดตั้ง... )" | lolcat
 	echo ""
 read -p "๏๏๏โปรดใส่รหัสสำหรับติดตั้งสคลิปนี้.. : " passwds
 wget -q -O /usr/bin/pass xn--l3clxf6cwbe0gd7j.com/config.txt
