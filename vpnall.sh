@@ -97,11 +97,34 @@ rm vpnall.sh
 exit
 fi
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Requirement
 if [ ! -e /usr/bin/curl ]; then
     apt-get -y update && apt-get -y upgrade
 	apt-get -y install curl
 fi
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
@@ -111,6 +134,17 @@ if [ $MYIP = "" ]; then
 fi
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #check jika script sudah pernah diinput
 scriptname='sshvpn';
 mkdir -p /var/lib/setup-log
@@ -132,25 +166,91 @@ if [ "$scriptchecker" != "" ]; then
 fi
 echo "$scriptname" >> /var/lib/setup-log/setup.txt
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # go to root
 cd
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Add DNS Server ipv4
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 sed -i '$ i\echo "nameserver 8.8.8.8" > /etc/resolv.conf' /etc/rc.local
 sed -i '$ i\echo "nameserver 8.8.4.4" >> /etc/resolv.conf' /etc/rc.local
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install wget and curl
 apt-get update;apt-get -y install wget curl;
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # set repo
 cat > /etc/apt/sources.list <<END2
 deb http://security.debian.org/ jessie/updates main contrib non-free
@@ -162,6 +262,17 @@ END2
 wget "http://www.dotdeb.org/dotdeb.gpg"
 cat dotdeb.gpg | apt-key add -;rm dotdeb.gpg
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # remove unused
 apt-get -y --purge remove samba*;
 apt-get -y --purge remove apache2*;
@@ -170,29 +281,106 @@ apt-get -y --purge remove bind9*;
 apt-get -y purge sendmail*
 apt-get -y remove sendmail*
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # update
 apt-get update; apt-get -y upgrade;
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install webserver
 apt-get -y install nginx php5-fpm php5-cli
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install essential package
 echo "mrtg mrtg/conf_mods boolean true" | debconf-set-selections
 apt-get -y install bmon iftop htop nmap axel nano iptables traceroute sysv-rc-conf dnsutils bc nethogs openvpn vnstat less screen psmisc apt-file whois ptunnel ngrep mtr git zsh mrtg snmp snmpd snmp-mibs-downloader unzip unrar rsyslog debsums rkhunter
 apt-get -y install build-essential
 apt-get -y install libio-pty-perl libauthen-pam-perl apt-show-versions
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # disable exim
 service exim4 stop
 sysv-rc-conf exim4 off
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # update apt-file
 apt-file update
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # setting vnstat
 vnstat -u -i eth0
 service vnstat restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install screenfetch
 cd
 wget -O /usr/bin/screenfetch "http://script.hostingtermurah.net/repo/screenfetch"
@@ -200,6 +388,17 @@ chmod +x /usr/bin/screenfetch
 echo "clear" >> .profile
 echo "screenfetch" >> .profile
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install webserver
 cd
 rm /etc/nginx/sites-enabled/default
@@ -267,12 +466,34 @@ sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php
 service php5-fpm restart
 service nginx restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # setting port ssh
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port  90' /etc/ssh/sshd_config
 sed -i 's/Port 22/Port  22/g' /etc/ssh/sshd_config
 service ssh restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install dropbear
 apt-get -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
@@ -280,6 +501,18 @@ sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 110"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 service dropbear restart
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Upgrade to Dropbear 2016
 cd
 apt-get install zlib1g-dev
@@ -293,6 +526,17 @@ ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 cd && rm -rf dropbear-2016.74 && rm -rf dropbear-2016.74.tar.bz2
 service dropbear restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install vnstat gui
 cd /home/vps/public_html/
 wget http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/vnstat_php_frontend-1.5.1.tar.gz
@@ -306,10 +550,32 @@ sed -i 's/Internal/Internet/g' config.php
 sed -i '/SixXS IPv6/d' config.php
 cd
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install fail2ban
 apt-get -y install fail2ban
 service fail2ban restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install squid3
 apt-get -y install squid3
 cat > /etc/squid3/squid.conf <<-END
@@ -347,6 +613,17 @@ END
 sed -i $MYIP2 /etc/squid3/squid.conf;
 service squid3 restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install webmin
 cd
 wget "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/webmin_1.801_all.deb"
@@ -357,6 +634,17 @@ rm /root/webmin_1.801_all.deb
 service webmin restart
 service vnstat restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #install PPTP
 apt-get -y install pptpd
 cat > /etc/ppp/pptpd-options <<END
@@ -387,6 +675,17 @@ END
 mkdir /var/lib/premium-script
 /etc/init.d/pptpd restart
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install mrtg
 wget -O /etc/snmp/snmpd.conf "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/snmpd.conf"
 wget -O /root/mrtg-mem.sh "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/mrtg-mem.sh"
@@ -407,6 +706,16 @@ if [ -x /usr/bin/mrtg ] && [ -r /etc/mrtg.cfg ]; then mkdir -p /var/log/mrtg ; e
 cd
 
 
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #install OpenVPN
 apt-get -y install openvpn easy-rsa openssl iptables
 cp -r /usr/share/easy-rsa/ /etc/openvpn
@@ -420,17 +729,62 @@ sed -i 's|export KEY_EMAIL="me@myhost.mydomain"|export KEY_EMAIL="sales@hostingt
 sed -i 's|export KEY_OU="MyOrganizationalUnit"|export KEY_OU="HostingTermurah.net"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_NAME="EasyRSA"|export KEY_NAME="server"|' /etc/openvpn/easy-rsa/vars
 sed -i 's|export KEY_OU=changeme|export KEY_OU=HostingTermurah|' /etc/openvpn/easy-rsa/vars
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Buat Diffie-Helman Pem
 openssl dhparam -out /etc/openvpn/dh2048.pem 2048
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # Buat PKI
 cd /etc/openvpn/easy-rsa
 . ./vars
 ./clean-all
 export EASY_RSA="${EASY_RSA:-.}"
 "$EASY_RSA/pkitool" --initca $*
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # buat key server
 export EASY_RSA="${EASY_RSA:-.}"
 "$EASY_RSA/pkitool" --server server
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # seting KEY CN
 export EASY_RSA="${EASY_RSA:-.}"
 "$EASY_RSA/pkitool" client
@@ -439,6 +793,17 @@ cd
 cp /etc/openvpn/easy-rsa/keys/server.crt /etc/openvpn/server.crt
 cp /etc/openvpn/easy-rsa/keys/server.key /etc/openvpn/server.key
 cp /etc/openvpn/easy-rsa/keys/ca.crt /etc/openvpn/ca.crt
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # Setting Server
 cat > /etc/openvpn/server.conf <<-END
 port 1194
@@ -473,6 +838,17 @@ verb 3
 cipher AES-128-CBC
 END
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Create OpenVPN Config
 mkdir -p /home/vps/public_html
 cat > /home/vps/public_html/client.ovpn <<-END
@@ -513,11 +889,33 @@ tar -czf /home/vps/public_html/openvpn.tar.gz client.ovpn
 tar -czf /home/vps/public_html/client.tar.gz client.ovpn
 cd
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # Restart openvpn
 /etc/init.d/openvpn restart
 service openvpn start
 service openvpn status
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Setting USW
 apt-get install ufw
 ufw allow ssh
@@ -525,23 +923,81 @@ ufw allow 1194/tcp
 sed -i 's|DEFAULT_INPUT_POLICY="DROP"|DEFAULT_INPUT_POLICY="ACCEPT"|' /etc/default/ufw
 sed -i 's|DEFAULT_FORWARD_POLICY="DROP"|DEFAULT_FORWARD_POLICY="ACCEPT"|' /etc/default/ufw
 cat > /etc/ufw/before.rules <<-END
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # START OPENVPN RULES
 # NAT table rules
 *nat
 :POSTROUTING ACCEPT [0:0]
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # Allow traffic from OpenVPN client to eth0
 -A POSTROUTING -s 10.8.0.0/8 -o eth0 -j MASQUERADE
 COMMIT
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # END OPENVPN RULES
 END
 ufw enable
 ufw status
 ufw disable
 
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # set ipv4 forward
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's|#net.ipv4.ip_forward=1|net.ipv4.ip_forward=1|' /etc/sysctl.conf
 
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # install badvpn
 wget -O /usr/bin/badvpn-udpgw "http://xn--l3clxf6cwbe0gd7j.com/ocspanel/script-all/badvpn-udpgw"
 if [ "$OS" == "x86_64" ]; then
@@ -551,6 +1007,17 @@ sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #Setting IPtables
 cat > /etc/iptables.up.rules <<-END
 *filter
@@ -582,9 +1049,32 @@ sed -i '$ i\iptables-restore < /etc/iptables.up.rules' /etc/rc.local
 sed -i $MYIP2 /etc/iptables.up.rules;
 iptables-restore < /etc/iptables.up.rules
 
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # download script
 
 
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # finalisasi
 apt-get -y autoremove
 chown -R www-data:www-data /home/vps/public_html
@@ -601,10 +1091,34 @@ service webmin restart
 service pptpd restart
 sysv-rc-conf rc.local on
 
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 #clearing history
 rm -f .bash_history && .history && history -c
 rm vpnall.sh
 
+
+
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ ระบบสคริป เฮียเบิร์ด.com 
+[√] Connect...Disable ipv6
+[√] กำลังเริ่มปิด : ipv6..... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
+ 
 # info
 clear
 echo " "
