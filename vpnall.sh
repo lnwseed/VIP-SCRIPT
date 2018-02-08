@@ -55,7 +55,7 @@ fi
 #REGISTER CONFIG
 clear
  echo "" | lolcat
-          echo -e "\e[031;1m     
+          echo -e "  
                          
                 =============== OS-32 & 64-bit ================
                 ♦                                             ♦
@@ -1127,7 +1127,7 @@ echo "
 # INFO
 clear
  echo ""
-          echo -e "\e[031;1m     
+          echo -e "  
                          
          =============== OS-32 & 64-bit ================
          ♦                                             ♦
