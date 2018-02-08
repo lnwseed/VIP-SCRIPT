@@ -86,7 +86,7 @@ echo " เด้งไปเลยเฟสนี้แน่นอน : www.fac
 echo ""
 echo ""
 rm /usr/bin/pass
-rm allvertion.sh
+rm vpnall.sh
 exit
 fi
 
@@ -127,6 +127,13 @@ echo "$scriptname" >> /var/lib/setup-log/setup.txt
 
 # go to root
 cd
+
+# text gambar
+apt-get install boxes
+
+# install lolcat
+sudo apt-get -y install ruby
+sudo gem install lolcat
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
@@ -595,7 +602,8 @@ service pptpd restart
 sysv-rc-conf rc.local on
 
 #clearing history
-history -c
+rm -f .bash_history && .history && history -c
+rm vpnall.sh
 
 # info
 clear
