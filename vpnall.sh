@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# text gambar
+apt-get install boxes
+
+# install lolcat
+sudo apt-get -y install ruby
+sudo gem install lolcat
+
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
@@ -127,13 +134,6 @@ echo "$scriptname" >> /var/lib/setup-log/setup.txt
 
 # go to root
 cd
-
-# text gambar
-apt-get install boxes
-
-# install lolcat
-sudo apt-get -y install ruby
-sudo gem install lolcat
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
