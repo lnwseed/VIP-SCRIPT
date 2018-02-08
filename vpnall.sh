@@ -55,7 +55,7 @@ fi
 #REGISTER CONFIG
 clear
  echo "" | lolcat
-          echo -e "  
+          echo "  
                          
                 =============== OS-32 & 64-bit ================
                 ♦                                             ♦
@@ -81,9 +81,9 @@ clear
                            Thank You For Choice Us" | lolcat
 			
 	echo ""
-	echo -e "\e[034;1m----SCRIPT V.1 VIP"
+	echo "----SCRIPT V.1 VIP"
 	echo ""
-	echo -e "\e[032;1m ( ใส่รหัสผ่านติดตั้ง... )" | lolcat
+	echo "( ใส่รหัสผ่านติดตั้ง... )"
 	echo ""
 read -p "๏๏๏โปรดใส่รหัสสำหรับติดตั้งสคลิปนี้.. : " passwds
 wget -q -O /usr/bin/pass xn--l3clxf6cwbe0gd7j.com/config.txt
