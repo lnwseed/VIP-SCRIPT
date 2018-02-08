@@ -1066,37 +1066,37 @@ echo "
  
 # download script
 cd
-wget -O /usr/bin/bench-network $source/menufree/bench-network
-wget -O /usr/bin/menu $source/menufree/menu
-wget -O /usr/bin/ram $source/menufree/ram
-wget -O /usr/bin/speedtest $source/menufree/speedtest
-wget -O /usr/bin/user-add $source/menufree/user-add
-wget -O /usr/bin/user-addday $source/menufree/user-addday
-wget -O /usr/bin/user-ban $source/menufree/user-ban
-wget -O /usr/bin/user-delete $source/menufree/user-delete
-wget -O /usr/bin/user-generate $source/menufree/user-generate
-wget -O /usr/bin/user-limit $source/menufree/user-limit
-wget -O /usr/bin/user-list $source/menufree/user-list
-wget -O /usr/bin/user-password $source/menufree/user-password
-wget -O /usr/bin/user-trial $source/menufree/user-trial
-wget -O /usr/bin/user-unban $source/menufree/user-unban
+wget -O /usr/local/bin/bench-network $source/menufree/bench-network
+wget -O /usr/local/bin/menu $source/menufree/menu
+wget -O /usr/local/bin/ram $source/menufree/ram
+wget -O /usr/local/bin/speedtest $source/menufree/speedtest
+wget -O /usr/local/bin/user-add $source/menufree/user-add
+wget -O /usr/local/bin/user-addday $source/menufree/user-addday
+wget -O /usr/local/bin/user-ban $source/menufree/user-ban
+wget -O /usr/local/bin/user-delete $source/menufree/user-delete
+wget -O /usr/local/bin/user-generate $source/menufree/user-generate
+wget -O /usr/local/bin/user-limit $source/menufree/user-limit
+wget -O /usr/local/bin/user-list $source/menufree/user-list
+wget -O /usr/local/bin/user-password $source/menufree/user-password
+wget -O /usr/local/bin/user-trial $source/menufree/user-trial
+wget -O /usr/local/bin/user-unban $source/menufree/user-unban
 
 # setup script
 cd
-chmod +x /usr/bin/bench-network
-chmod +x /usr/bin/menu
-chmod +x /usr/bin/ram
-chmod +x /usr/bin/speedtest
-chmod +x /usr/bin/user-add
-chmod +x /usr/bin/user-addday
-chmod +x /usr/bin/user-ban
-chmod +x /usr/bin/user-delete
-chmod +x /usr/bin/user-generate
-chmod +x /usr/bin/user-limit
-chmod +x /usr/bin/user-list
-chmod +x /usr/bin/user-password
-chmod +x /usr/bin/user-trial
-chmod +x /usr/bin/user-unban
+chmod +x /usr/local/bin/bench-network
+chmod +x /usr/local/bin/menu
+chmod +x /usr/local/bin/ram
+chmod +x /usr/local/bin/speedtest
+chmod +x /usr/local/bin/user-add
+chmod +x /usr/local/bin/user-addday
+chmod +x /usr/local/bin/user-ban
+chmod +x /usr/local/bin/user-delete
+chmod +x /usr/local/bin/user-generate
+chmod +x /usr/local/bin/user-limit
+chmod +x /usr/local/bin/user-list
+chmod +x /usr/local/bin/user-password
+chmod +x /usr/local/bin/user-trial
+chmod +x /usr/local/bin/user-unban
 
 
 clear
