@@ -1118,16 +1118,32 @@ echo "
 ----------------------------------------------
  " | lolcat
  sleep 5
- 
-# info
-clear
-echo " "
-echo "การติดตั้งเสร็จสิ้นแล้ว! โปรดอ่านและบันทึกคำอธิบายการตั้งค่าเซิร์ฟเวอร์!"
-echo " "
-echo "------------------------- คำอธิบายเกี่ยวกับการตั้งค่าเซิร์ฟเวอร์ --------------------------"
-echo "                         Copyright HostingTermurah.net                          "
-echo "                        https://www.hostingtermurah.net                         "
-echo "                    Created By เฮียเบิร์ด.com (fb.com/ceolnw)                      "
-echo "--------------------------------------------------------------------------------"
 
-echo "----------- Script Created By Here bird lnwshop (fb.com/ceolnw) ------------"
+
+# INFO
+clear
+ echo ""
+          echo -e "\e[031;1m     
+                         
+         =============== OS-32 & 64-bit ================
+         ♦                                             ♦
+         ♦     AUTOSCRIPT CREATED BY เฮียเบิร์ด แงะตลอด   ♦
+         ♦       -----------About Us------------       ♦ 
+         ♦            Telp : 097-026-7262              ♦
+         ♦         { VPN / SSH / OCS PANEL }           ♦ 
+         ♦       http://facebook.com/Ceolnw            ♦    
+         ♦             Line id : ceolnw                ♦
+         ♦                                             ♦
+         =============== OS-32 & 64-bit ================ 
+                                      
+                    Thank You For Choice Us" | lolcat
+			
+echo "" | lolcat
+echo "====================================================================" | lolcat
+echo "       ดำเนินการเสร็จสิ้น... กรุณาพิมพ์คำสั่ง menu เพื่อไปยังขั้นตอนถัดไป"
+echo "====================================================================" | lolcat
+echo "----- SCRIPT OCSPANEL.INFO / เฮียเบิร์ด.com / FACEBOOK.COM/CEOLNW------" | lolcat
+echo "" | lolcat
+
+cd
+rm -f /root/vpnall.sh
