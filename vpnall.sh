@@ -47,7 +47,7 @@ fi
 vps="VPS";
 
 if [[ $vps = "VPS" ]]; then
-	source="http://xn--l3clxf6cwbe0gd7j.com/ocspanel/fast-vpn-script"
+	source="http://xn--l3clxf6cwbe0gd7j.com/ocspanel"
 else
 	source="http://เฮียเบิร์ด.com"
 fi
@@ -1065,8 +1065,38 @@ echo "
  sleep 5
  
 # download script
+cd
+wget -O /usr/bin/bench-network $source/menufree/bench-network
+wget -O /usr/bin/menu $source/menufree/menu
+wget -O /usr/bin/ram $source/menufree/ram
+wget -O /usr/bin/speedtest $source/menufree/speedtest
+wget -O /usr/bin/user-add $source/menufree/user-add
+wget -O /usr/bin/user-addday $source/menufree/user-addday
+wget -O /usr/bin/user-ban $source/menufree/user-ban
+wget -O /usr/bin/user-delete $source/menufree/user-delete
+wget -O /usr/bin/user-generate $source/menufree/user-generate
+wget -O /usr/bin/user-limit $source/menufree/user-limit
+wget -O /usr/bin/user-list $source/menufree/user-list
+wget -O /usr/bin/user-password $source/menufree/user-password
+wget -O /usr/bin/user-trial $source/menufree/user-trial
+wget -O /usr/bin/user-unban $source/menufree/user-unban
 
-
+# setup script
+cd
+chmod +x /usr/bin/bench-network
+chmod +x /usr/bin/menu
+chmod +x /usr/bin/ram
+chmod +x /usr/bin/speedtest
+chmod +x /usr/bin/user-add
+chmod +x /usr/bin/user-addday
+chmod +x /usr/bin/user-ban
+chmod +x /usr/bin/user-delete
+chmod +x /usr/bin/user-generate
+chmod +x /usr/bin/user-limit
+chmod +x /usr/bin/user-list
+chmod +x /usr/bin/user-password
+chmod +x /usr/bin/user-trial
+chmod +x /usr/bin/user-unban
 
 
 clear
