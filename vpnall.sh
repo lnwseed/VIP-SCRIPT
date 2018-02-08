@@ -47,7 +47,7 @@ fi
 vps="VPS";
 
 if [[ $vps = "VPS" ]]; then
-	source="http://ocspanel.info"
+	source="http://xn--l3clxf6cwbe0gd7j.com/ocspanel/fast-vpn-script"
 else
 	source="http://เฮียเบิร์ด.com"
 fi
