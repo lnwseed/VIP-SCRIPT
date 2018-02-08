@@ -1157,7 +1157,7 @@ echo "
 # INFO
 clear
  echo ""
-          echo -e "  
+          echo "  
                          
          =============== OS-32 & 64-bit ================
          ♦                                             ♦
