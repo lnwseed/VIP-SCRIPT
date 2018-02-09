@@ -1,10 +1,3 @@
-#if 0
-	shc Version 3.8.9b, Generic Script Compiler
-	Copyright (c) 1994-2015 Francisco Rosales <frosal@fi.upm.es>
-
-	./shc -r -v -f vpnall.sh 
-#endif
-
 static  char data [] = 
 #define      msg2_z	19
 #define      msg2	((&data[0]))
